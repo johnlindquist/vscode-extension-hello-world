@@ -4,7 +4,10 @@
   "description": "",
   "main": "./out/extension.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vsce package",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "tslint -p ./",
     "watch": "tsc -watch -p ./"
   },
   "keywords": [],
@@ -23,10 +26,10 @@
     "vscode": "^1.22.0"
   },
   "devDependencies": {
+    "@types/node": "^14.0.13",
     "@types/vscode": "^1.46.0",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "vsce": "^1.77.0"
   },
-  "dependencies": {
-    "lorem-ipsum": "^2.0.3"
-  }
+  "dependencies": {}
 }
