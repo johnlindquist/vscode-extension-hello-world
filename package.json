@@ -1,0 +1,32 @@
+{
+  "name": "vscode-extension-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./out/extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -watch -p ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "activationEvents": [
+    "onCommand:johnlindquist.helloWorld"
+  ],
+  "contributes": {
+    "commands": {
+      "command": "johnlindquist.helloWorld",
+      "title": "Paste an image into a Gatsby folder"
+    }
+  },
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.46.0",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "lorem-ipsum": "^2.0.3"
+  }
+}
